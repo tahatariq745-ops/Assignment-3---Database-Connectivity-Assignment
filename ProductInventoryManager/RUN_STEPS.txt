@@ -1,0 +1,14 @@
+PRODUCT INVENTORY MANAGER - RUN STEPS
+
+1. Install .NET 8 SDK.
+2. Install SQL Server LocalDB or SQL Server Express.
+3. Extract the ZIP folder.
+4. Open terminal in ProductInventoryManager/Backend.
+5. Run: dotnet restore
+6. Run: dotnet run
+7. Confirm backend opens at: http://localhost:5000/api/products
+8. Open ProductInventoryManager/Frontend/index.html using VS Code Live Server.
+9. Add, edit, delete, and view product records.
+
+If using SQL Server Express, update Backend/appsettings.json connection string:
+Server=.\SQLEXPRESS;Database=ProductInventoryDb;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Inventory Manager</title>
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+    <header class="app-header">
+        <div>
+            <p class="eyebrow">Web Technologies Assignment</p>
+            <h1>Product Inventory Manager</h1>
+            <p class="subtitle">View, add, update, and delete inventory records using ASP.NET Core REST API and SQL Server.</p>
+        </div>
+        <a class="primary-button" href="product-form.html">+ Add Product</a>
+    </header>
+
+    <main class="container">
+        <section class="toolbar card">
+            <div>
+                <label for="searchInput">Search Products</label>
+                <input type="search" id="searchInput" placeholder="Search by name, category, or supplier">
+            </div>
+            <button id="refreshButton" class="secondary-button">Refresh</button>
+        </section>
+
+        <section class="card table-card">
+            <div class="table-title-row">
+                <h2>Inventory Records</h2>
+                <span id="recordCount" class="badge">0 records</span>
+            </div>
+
+            <div id="message" class="message hidden"></div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Product Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Supplier</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productsTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
