@@ -1,5 +1,8 @@
 # Product Inventory Manager
 
+# By Muhammad Taha Tariq 
+## [2502077] 
+
 This is a simple **Product Inventory Manager** web application built for the Web Technologies Database Connectivity Assignment.
 
 The project is divided into separate folders:
@@ -57,107 +60,6 @@ ProductInventoryManager/
 ## Screenshot
 
 ![Product Inventory Manager Screenshot](Frontend/screenshots/home-screen.png)
-
-## Required Software
-
-Install these before running the project:
-
-1. .NET 8 SDK
-2. SQL Server LocalDB or SQL Server Express
-3. Visual Studio Code or Visual Studio
-4. Live Server extension in VS Code, or any simple static file server for frontend
-
-## Database Connection
-
-The backend uses SQL Server LocalDB by default.
-
-File:
-
-```text
-Backend/appsettings.json
-```
-
-Default connection string:
-
-```json
-"DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=ProductInventoryDb;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True"
-```
-
-The database is created automatically when the backend runs because the project uses:
-
-```csharp
-db.Database.EnsureCreated();
-```
-
-If you are using SQL Server Express instead of LocalDB, replace the connection string with:
-
-```json
-"DefaultConnection": "Server=.\\SQLEXPRESS;Database=ProductInventoryDb;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True"
-```
-
-A manual SQL script is also available here:
-
-```text
-Backend/SQL/CreateDatabase.sql
-```
-
-## How to Run the Project
-
-### Step 1: Extract the ZIP file
-
-Extract the project folder.
-
-### Step 2: Open terminal in the backend folder
-
-```bash
-cd ProductInventoryManager/Backend
-```
-
-### Step 3: Restore backend packages
-
-```bash
-dotnet restore
-```
-
-### Step 4: Run the backend API
-
-```bash
-dotnet run
-```
-
-The backend will run at:
-
-```text
-http://localhost:5000
-```
-
-Test API in browser:
-
-```text
-http://localhost:5000/api/products
-```
-
-### Step 5: Run the frontend
-
-Open the `Frontend` folder in VS Code.
-
-Right-click this file:
-
-```text
-Frontend/index.html
-```
-
-Then click:
-
-```text
-Open with Live Server
-```
-
-The frontend will open in the browser, usually at:
-
-```text
-http://127.0.0.1:5500/Frontend/index.html
-```
 
 ## API Endpoints
 
